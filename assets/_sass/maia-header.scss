@@ -1,0 +1,23 @@
+body {
+  margin-top: 5rem;
+}
+
+header {
+  .main-nav {
+    padding: 1rem;
+  }
+
+  .pure-menu-list {
+    float: right;
+  }
+
+  // .pure-menu-item {
+  //   margin: 0 4px;
+  //
+  //   &:not(:first-child) .page-link::after {
+  //     content: "•";
+  //     position: absolute;
+  //     left: -7px;
+  //   }
+  // }
+}
