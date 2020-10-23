@@ -1,0 +1,12 @@
+<header>
+    <div class="main-nav">
+        <h1>
+            Maia Chess
+        </h1>
+        <nav>
+            {%- for path in site.header_pages -%}
+            <a  class="page-link" href="{{ path | relative_url }}">{{ path }}</a>
+            {%- endfor -%}
+        </nav>
+    </div>
+</header>

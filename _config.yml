@@ -1,1 +1,20 @@
-theme: jekyll-theme-modernist
+title: Maia Chess
+baseurl: ""
+url: "https://maiachess.com"
+
+permalink: pretty
+
+header_pages:
+  - About
+  - Blog
+  - Papers
+  - Play
+  - Examples
+  - Team
+  - Contact
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - "*.sh"
+  - CNAME
