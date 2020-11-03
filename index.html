@@ -7,9 +7,59 @@ title: Maia Chess
   <h1>Maia Chess</h1>
   <h2>A human like neural network chess engine</h2>
 
-  <div class="hero-image">
-    <img src="assets/images/intro_bar_plt.svg" />
-  </div>
+
+
+
+<script src="{{ '/assets/js/Chart.js' | relative_url }}"></script>
+
+<canvas id="maia_bars" height="100"></canvas>
+
+<script>
+  var ctx = document.getElementById('maia_bars').getContext('2d');
+  main_chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Stockfish', 'Leela', 'Maia'],
+      datasets: [{
+        label: 'Accuracy',
+        data: [38.718, 44.512, 51.802, 5, 2, 3],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Model',
+          },
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Accuracy',
+          },
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+</script>
 
   <p>
     Maia is trained on millions of human chess games to predict the human moves
