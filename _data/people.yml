@@ -1,0 +1,28 @@
+- name: Reid McIlroy-Young
+  website: https:reidmcy.com
+  twitter: reidmcy
+  github: reidmcy
+  image: /assets/images/people/reid.jpeg
+  affiliation: University of Toronto, Computer Science
+
+- name: Russell Wang
+  github: rwang97
+  image: /assets/images/people/russell.jpeg
+  affiliation: University of Toronto, Computer Science
+
+- name: Ashton Anderson
+  github: ashtonanderson
+  twitter: ashton1anderson
+  website: http://www.cs.toronto.edu/~ashton/
+  image: /assets/images/people/ashton.jpeg
+  affiliation: University of Toronto, Computer Science
+
+- name: Siddhartha Sen
+  website: http://sidsen.org
+  image: /assets/images/people/sid.jpeg
+  affiliation: Microsoft Research
+
+- name: Jon Kleinberg
+  website: http://www.cs.cornell.edu/home/kleinber
+  image: /assets/images/people/jon.jpeg
+  affiliation: Cornell University, Computer Science

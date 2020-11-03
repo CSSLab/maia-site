@@ -1,0 +1,14 @@
+.people-list {
+    display: flex;
+    flex-flow: column;
+}
+
+.person {
+    display: flex;
+    flex-flow: row;
+}
+
+.person-photo {
+    width: 10%;
+    height: auto;
+}

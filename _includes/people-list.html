@@ -1,0 +1,23 @@
+
+<div class="people-list">
+    {% assign people = site.data.people %}
+    {%- for person in people -%}
+        <div class="person">
+            <div class="person-image">
+                <!-- <img src= "{{ person.image | relative_url }}" class="person-photo">
+                -->
+            </div>
+            <div class="person-name">
+                <p>{{ person.name }}</p>
+                <p>{{ person.affiliation }}</p>
+                <a href="{{ person.website }}" class="person-link" target="_blank">website</a>
+                {%- if person.twitter -%}<li><i class="fab fa-twitter"></i> <a
+                href="https://www.twitter.com/{{ person.twitter| cgi_escape | escape }}"><span
+                    class="username">{{ person.twitter| escape }}</span></a></li>{%- endif -%}
+                {%- if person.github -%}<li><i class="fab fa-github"></i> <a
+                href="https://github.com/{{ person.github| cgi_escape | escape }}"><span
+                    class="username">{{ person.github| escape }}</span></a></li>{%- endif -%}
+            </div>
+        </div>
+    {%- endfor -%}
+</div>
