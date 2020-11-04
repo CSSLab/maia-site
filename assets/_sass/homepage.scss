@@ -31,6 +31,49 @@
     height: 100vh;
   }
 
+  .slide_view {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    height: 100vh;
+    figure img {
+      width: 80%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    };
+  }
+
+
+  .two_column {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+
+  .plot_column {
+    display: flex;
+    canvas {
+      width: 60%;
+    }
+  }
+  .text_column {
+    text-align: left;
+    flex-grow: 1;
+    h2 {
+    color: black;
+    text-align: left;
+    font-weight: 600;
+  };
+    p {
+    color: black;
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    font-weight: 500;
+  }
+  }
+
   .homepage-nav {
     margin: 4rem 0;
   }

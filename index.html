@@ -9,55 +9,9 @@ title: Maia Chess
   <h2>A human like neural network chess engine</h2>
 
 <script src="{{ '/assets/js/Chart.js' | relative_url }}"></script>
-
+<script src="{{ '/assets/js/plots.js' | relative_url }}"></script>
 <canvas id="maia_bars" height="100"></canvas>
-
-<script>
-  var ctx = document.getElementById('maia_bars').getContext('2d');
-  main_chart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Stockfish', 'Leela', 'Maia'],
-      datasets: [{
-        label: 'Accuracy',
-        data: [38.718, 44.512, 51.802, 5, 2, 3],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      legend: {
-        display: false
-      },
-      scales: {
-        xAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: 'Model',
-          },
-        }],
-        yAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: 'Accuracy',
-          },
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
-    }
-  });
-</script>
+<script>draw_main_bar_plot()</script>
 
   <p>
     Maia is trained on millions of human chess games to predict the human moves
@@ -75,9 +29,48 @@ title: Maia Chess
       <a href="https://arxiv.org/abs/2006.01855"> Full Paper</a>
     </div>
   </div>
+  <p>Scroll down for more</p>
 </div>
-  <h2>Overview</h2>
 
-  <p>A couple paragraphs</p>
-  <p>A couple paragraphs</p>
+<div class="slide_view">
+
+  <p>Maia is an AlphaZero/Leela-like deep learning framework that learns from online human games instead of self-play</p>
+
+  <figure>
+    <img src="{{ '/assets/images/observer-diagram.svg' | relative_url }}" alt="observer diagram">
+    <figcaption>
+      Schematic of Leela playing itself versus Maia watching humans play TEMP
+    </figcaption>
+
+  <p>Maia’s goal is to play the human move — not necessarily the best move</p>
+</div>
+<div class="slide_view">
+  <p>We trained 9 versions of Maia, one for each Elo milestone between 1100 and 1900. Each version learned from 12 million human games.</p>
+  <figure>
+    <img src="{{ '/assets/images/example_board.png' | relative_url }}" alt="example board">
+    <figcaption>In this position, Maia levels 1100–1400 correctly predict that White will play the tempting but wrong move b6 (the move
+    played in the game). It threatens the Queen, but after …Qxc5 White’s big advantage is mostly gone. Maia levels 1500–1900
+    predict that, on average, players rated 1500 and above will play the correct bxa6, forcing the Queenside open to
+    decisive effect.
+</figcaption>
+  </figure>
+<p>We measure “move-matching accuracy”, how often Maia’s move is the same as the human move played in real online games</p>
+</div>
+
+<div class="slide_view">
+<div class="two_column">
+  <div class="plot_column">
+    <canvas id="maia_lines"></canvas>
+    <script>draw_main_line_plot()</script>
+  </div>
+
+  <div class="text_column">
+    <p>We tested each Maia on 500,000 positions for each rating level between 1100 and 1900</p>
+    <p><b> Maia captures human style at its specified skill level</b></p>
+    <p>Lower Maias best predict moves played by lower-rated players, whereas higher Maias predict moves made by higher-rated players.</p>
+  </div>
+</div>
+  <p>Maia is fun to play and will help you learn how to get to the next level. It is an ongoing research project by a team at the University of Toronto, Cornell University, and Microsoft Research.</p>
+</div>
+</div>
 </div>

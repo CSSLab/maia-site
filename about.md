@@ -3,7 +3,7 @@ layout: infopage
 title: About
 ---
 
-This project is being done by the [Computational Social Science Lab](csslab.cs.toronto.edu/) at the University of Toronto, with collaboration with Microsoft Research.
+This project is being done by the [Computational Social Science Lab](csslab.cs.toronto.edu/) at the University of Toronto,  Microsoft Research and Cornell.
 
 The people working on this are:
 

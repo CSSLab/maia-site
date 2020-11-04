@@ -8,13 +8,10 @@ sass:
 permalink: pretty
 
 header_pages:
-  - About
-  - Blog
-  - Papers
   - Play
   - Examples
-  - Team
-  - Contact
+  - Papers
+  - About
 
 exclude:
   - Gemfile
