@@ -21,6 +21,9 @@ function draw_main_bar_plot() {
             }]
         },
         options: {
+            tooltips: {
+                enabled : false,
+            },
             legend: {
                 display: false
             },

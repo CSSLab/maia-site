@@ -7,13 +7,22 @@
     type="image/x-icon"
     href="{{ '/assets/images/favicon.ico' | relative_url }}"
   />
+
+
+
   <link rel="stylesheet" href="{{ '/assets/pure/pure.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/pure/grids-responsive.css' | relative_url }}" />
+
+
+  <link href="{{ "/assets/css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
+  <link href="{{ "/assets/grayscale/styles.css" | relative_url }}" rel="stylesheet">
+
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ "/assets/css/fontawesome.css" | relative_url }}">
+
   <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
-  <!-- It's just a count of how many people visit and where they come from -->
+  <!-- It's just a count of how many people visit and where they come from and is hosted on one of our own servers -->
   <script>
     (function (f, a, t, h, o, m) {
       a[h] = a[h] || function () {
@@ -28,4 +37,5 @@
     fathom('trackPageview');
   </script>
   <!-- / Fathom -->
+
 </head>
