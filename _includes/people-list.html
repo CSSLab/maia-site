@@ -1,23 +1,46 @@
 
-<div class="people-list">
+<div class="people-list animate_hidden">
     {% assign people = site.data.people %}
     {%- for person in people -%}
         <div class="person">
-            <div class="person-image">
-                <!-- <img src= "{{ person.image | relative_url }}" class="person-photo">
-                -->
-            </div>
-            <div class="person-name">
-                <p>{{ person.name }}</p>
+                <div class="person-line">
+                <img class="img-circle img-responsive img-center person-image" src="{{person.image }}">
+                </div>
+
+                <div class="person-line">
+                <a href="{%- if person.website -%}{{ person.website | escape }}{% else %} https://github.com/{{ person.github| cgi_escape | escape }}{%- endif -%}">{{ person.name }}</a>
+                </div>
+                <div class="person-line">
                 <p>{{ person.affiliation }}</p>
-                <a href="{{ person.website }}" class="person-link" target="_blank">website</a>
-                {%- if person.twitter -%}<li><i class="fab fa-twitter"></i> <a
-                href="https://www.twitter.com/{{ person.twitter| cgi_escape | escape }}"><span
-                    class="username">{{ person.twitter| escape }}</span></a></li>{%- endif -%}
-                {%- if person.github -%}<li><i class="fab fa-github"></i> <a
-                href="https://github.com/{{ person.github| cgi_escape | escape }}"><span
-                    class="username">{{ person.github| escape }}</span></a></li>{%- endif -%}
-            </div>
+                </div>
+
+                <div class="person-line">
+                    {%- if person.website -%}
+                    <div class="person-link">
+                        <a href="{{ person.website | escape }}">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    {%- endif -%}
+
+                    {%- if person.twitter -%}
+                    <div class="person-link">
+                     <a href="https://www.twitter.com/{{ person.twitter| cgi_escape | escape }}">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    </div>
+                    {%- endif -%}
+
+                    {%- if person.github -%}
+                    <div class="person-link">
+                        <a href="https://github.com/{{ person.github| cgi_escape | escape }}">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    {%- endif -%}
+                </div>
+            </h3>
+
         </div>
     {%- endfor -%}
 </div>

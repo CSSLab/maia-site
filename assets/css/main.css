@@ -1,14 +1,59 @@
+.people-section {
+  width: 100%;
+  background: rgb(218, 152, 152);
+}
+
 .people-list {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .person {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
+    background: gray;
+    align-items: stretch;
+    justify-content: space-between;
+    min-width: 400px;
 }
 
-.person-photo {
-    width: 10%;
+.person-line {
+    display: flex;
+    flex-flow: row;
+    background: gray;
+    justify-content: space-evenly;
+    align-items: stretch;
+    font-size: 3rem;
+}
+
+.person-line > .person-link {
+    font-size: 4rem;
+    width: 100%;
+}
+
+.person-line > .person-link:nth-child(1) {
+    background: rgb(201, 125, 74);
+}
+.person-line > .person-link:nth-child(2) {
+    background: rgb(214, 177, 73);
+}
+.person-line > .person-link:nth-child(3) {
+    background: rgb(201, 212, 45);
+}
+
+.person-image {
+    width: 200px;
     height: auto;
+}
+
+.left-justify-section > p {
+    text-align: left;
+}
+
+.paper-section >div>div > p {
+    font-size: 2rem;
+    white-space: pre-wrap;
 }

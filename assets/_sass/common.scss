@@ -6,6 +6,12 @@ body {
   background: white;
 }
 
+code {
+  display: block;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
 .content {
   padding: 1rem;
   max-width: 1000px;
@@ -28,6 +34,7 @@ body {
 .animate_unhidden {
   visibility: visible;
 }
+
 
 //based on
 // www.justinaguilar.com/animations/

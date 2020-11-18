@@ -2,12 +2,7 @@
   website: https:reidmcy.com
   twitter: reidmcy
   github: reidmcy
-  image: /assets/images/people/reid.jpeg
-  affiliation: University of Toronto, Computer Science
-
-- name: Russell Wang
-  github: rwang97
-  image: /assets/images/people/russell.jpeg
+  image: /assets/images/people/reid.jpg
   affiliation: University of Toronto, Computer Science
 
 - name: Ashton Anderson
@@ -19,10 +14,15 @@
 
 - name: Siddhartha Sen
   website: http://sidsen.org
-  image: /assets/images/people/sid.jpeg
+  image: /assets/images/people/sid.tif
   affiliation: Microsoft Research
 
 - name: Jon Kleinberg
   website: http://www.cs.cornell.edu/home/kleinber
-  image: /assets/images/people/jon.jpeg
+  image: /assets/images/people/jon.jpg
   affiliation: Cornell University, Computer Science
+
+- name: Russell Wang
+  github: rwang97
+  image: /assets/images/people/russell.jpg
+  affiliation: University of Toronto, Computer Science

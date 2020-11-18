@@ -131,6 +131,7 @@ title: Maia Chess
     <div class="col-lg-4 col-lg-offset-1">
       <div class="text_column">
         <p>Looked at all of them together</p>
+        <p>The code for training Maia can be found on our <a href="https://github.com/CSSLab/maia-chess">Github Repo</a>.
       </div>
     </div>
   </div>
@@ -142,47 +143,67 @@ title: Maia Chess
 
 <section id="data" class="container content-section text-center">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <h2>DATA</h2>
-      <p> Lichess </p>
+    <div class="col-lg-8 col-lg-offset-2   left-justify-section">
+      <h2>Data</h2>
+      <p> All our data is from the wonderful archive at <a href="https://database.lichess.org/">database.lichess.org</a>. The data provided there is in pgn format which we converted to CSVs, the download for the CSV we used for testing can be found at <a href="http://csslab.cs.toronto.edu/datasets/#maia_kdd">csslab.cs.toronto.edu/datasets</a> information about using it</p>
+      <p>If you want the full dataset we used for training the models please get in touch</p>
     </div>
   </div>
 </section>
 
-<section id="paper" class="container content-section text-center">
+<section id="paper" class="container content-section text-center paper-section">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <h2>PAPER</h2>
-      <p> KDD, 2020 </p>
+    <h2>paper</h2>
+    <div class="col-lg-10 col-lg-offset-1 left-justify-section ">
+
+        <p> Our paper was published in KDD, 2020, the full paper can be found on <a
+            href="https://arxiv.org/abs/2006.01855">arXiv</a>.</p>
+
+        <p>You can also find a short video on it <a href="https://crossminds.ai/video/5f3375ad3a683f9107fc6bce/">here</a>.</p>
+
+      <h3>Abstract</h3>
+      <p>
+      As artificial intelligence becomes increasingly intelligent---in some cases, achieving superhuman performance---there is growing potential for humans to learn from and collaborate with algorithms. However, the ways in which AI systems approach problems are often different from the ways people do, and thus may be uninterpretable and hard to learn from. A crucial step in bridging this gap between human and artificial intelligence is modeling the granular actions that constitute human behavior, rather than simply matching aggregate human performance.
+
+      We pursue this goal in a model system with a long history in artificial intelligence: chess. The aggregate performance of a chess player unfolds as they make decisions over the course of a game. The hundreds of millions of games played online by players at every skill level form a rich source of data in which these decisions, and their exact context, are recorded in minute detail. Applying existing chess engines to this data, including an open-source implementation of AlphaZero, we find that they do not predict human moves well.
+
+      We develop and introduce Maia, a customized version of Alpha-Zero trained on human chess games, that predicts human moves at a much higher accuracy than existing engines, and can achieve maximum accuracy when predicting decisions made by players at a specific skill level in a tuneable way. For a dual task of predicting whether a human will make a large mistake on the next move, we develop a deep neural network that significantly outperforms competitive baselines. Taken together, our results suggest that there is substantial promise in designing artificial intelligence systems with human collaboration in mind by first accurately modeling granular human decision-making.
+      </p>
     </div>
+
   </div>
 </section>
 
-<section id="team" class="container content-section text-center">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+<section id="team" class="container content-section text-center people-section row">
+    <div class="row col-lg-10 col-lg-offset-1">
       <h2>Team</h2>
+      {% include people-list.html %}
     </div>
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 text-center">
-        <img class="img-circle img-responsive img-center" src="https://via.placeholder.com/150" alt>
-        <h3>
-          <a href="" target="_new">Reid</a>
-          <br><a class="twitter" href="https://twitter.com/reidmcy"><i class="fa fa-twitter fa-fw"></i> @reidmcy</a>
-        </h3>
-      </div>
+
+</section>
+<section id="bibtex" class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2  left-justify-section">
+      <h2>BibTex</h2>
+      <code>@inproceedings{mcilroyyoung2020maia,
+title={Aligning Superhuman AI with Human Behavior: Chess as a Model System},
+author={McIlroy-Young, Reid and Sen, Siddhartha and Kleinberg, Jon and Anderson, Ashton},
+year={2020},
+booktitle={Proceedings of the 25th ACM SIGKDD international conference on Knowledge discovery and data mining}
+}</code>
     </div>
   </div>
 </section>
 
 <section id="acknowledgments" class="container content-section text-center">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-8 col-lg-offset-2  left-justify-section">
       <h2>Acknowledgments</h2>
-      <p>Maia is fun to play and will help you learn how to get to the next level. It is an ongoing research project by a team at
+      <p>This is an ongoing research project by a team at
       the University of Toronto, Cornell University, and Microsoft Research.</p>
     </div>
   </div>
 </section>
+
 
 
