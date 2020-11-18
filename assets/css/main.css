@@ -44,6 +44,9 @@
     background: rgb(201, 212, 45);
 }
 
+.person > .person-line:nth-child(1) {
+    padding-top: 1em;
+}
 .person-image {
     width: 200px;
     height: auto;
@@ -63,11 +66,14 @@ footer {
 
 .footer-container {
     display:  flex;
-    flex-flow: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     opacity: .8;
+}
+
+.footer-container > p {
+    width: 20%;
     font-size: 1.5rem;
     text-align: left;
-
 }
