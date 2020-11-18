@@ -32,7 +32,7 @@ function draw_main_bar_plot() {
                 enabled : false,
             },
             legend: {
-                display: false
+                display: false,
             },
             scales: {
                 xAxes: [{
@@ -87,6 +87,7 @@ var line_plt_options = {
         position: 'right',
         labels: {
             fontSize: 16,
+            boxWidth: 1,
         },
     },
     scales: {
