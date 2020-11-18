@@ -28,7 +28,7 @@ code {
 }
 
 .animate_hidden {
-  visibility: hidden;
+  visibility: visible;
 }
 
 .animate_unhidden {
@@ -36,8 +36,8 @@ code {
 }
 
 .fadeIn{
-  animation-name: fadeIn;
-  -webkit-animation-name: fadeIn;
+  //animation-name: fadeIn;
+  //-webkit-animation-name: fadeIn;
 
   animation-duration: 3s;
   -webkit-animation-duration: 3s;
