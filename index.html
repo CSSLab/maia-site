@@ -21,8 +21,6 @@ title: Maia Chess
   <div class="row col-lg-8 col-lg-offset-2">
     <h2>A human like neural network chess engine</h2>
 
-    <script src="{{ '/assets/js/Chart.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/plots.js' | relative_url }}"></script>
     <canvas id="maia_bars" height="100"></canvas>
     <script>draw_main_bar_plot()</script>
 
@@ -34,31 +32,38 @@ title: Maia Chess
 </section>
 
 
-
-<section id="details" class="container content-section text-center">
+<section id="details" class="details_section">
+  <div class="container content-section text-center details_slide">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <p>Maia is an AlphaZero/Leela-like deep learning framework that learns from online human games instead of self-play</p>
-
-      <figure>
+    <div class="col-lg-4">
+      <figure class="animate_hidden">
         <img src="{{ '/assets/images/observer-diagram.svg' | relative_url }}" alt="observer diagram">
         <figcaption>
           Schematic of Leela playing itself versus Maia watching humans play TEMP
         </figcaption>
+      </figure>
+    </div>
+    <div class="col-lg-6 col-lg-offset-2">
+      <p>Maia is an AlphaZero/Leela Chess Zero-like deep learning framework that learns from online human games instead of self-play</p>
 
         <p>Maia’s goal is to play the human move — not necessarily the best move</p>
     </div>
+    </div>
   </div>
-</section>
-
-<section id="details2" class="container content-section text-center">
+</div>
+<div class="container content-section text-center details_slide">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-6 col-lg-offset-2">
       <p>We trained 9 versions of Maia, one for each Elo milestone between 1100 and 1900. Each version learned from 12 million
         human games.</p>
-      <figure>
-        <img src="{{ '/assets/images/example_board.png' | relative_url }}" alt="example board" width="50%">
-        <figcaption>In this position, Maia levels 1100–1400 correctly predict that White will play the tempting but wrong move
+      <p>We measure “move-matching accuracy”, how often Maia’s move is the same as the human move played in real online games
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <figure class="animate_hidden">
+        <img src="{{ '/assets/images/example_board.png' | relative_url }}" alt="example board" width="100%">
+        <figcaption>In this position, Maia levels 1100–1400 correctly predict that White will play the tempting but wrong
+          move
           b6 (the move
           played in the game). It threatens the Queen, but after …Qxc5 White’s big advantage is mostly gone. Maia levels
           1500–1900
@@ -66,34 +71,58 @@ title: Maia Chess
           decisive effect.
         </figcaption>
       </figure>
-      <p>We measure “move-matching accuracy”, how often Maia’s move is the same as the human move played in real online games
-      </p>
     </div>
   </div>
-</section>
-
-<section id="details3" class="container content-section text-center">
+  </div>
+</div>
+<div class="container content-section text-center details_slide">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <div class="two_column">
-        <div class="plot_column">
-          <canvas id="maia_lines"></canvas>
-          <script>draw_main_line_plot()</script>
-        </div>
+    <div class="col-lg-7">
+      <canvas id="maia_lines" class="line_plot animate_hidden" ></canvas>
+      <script>draw_main_line_plot(maia_data, 'maia_lines')</script>
+    </div>
+    <div class="col-lg-4 col-lg-offset-1">
+      <div class="text_column">
+        <p>We tested each Maia on 500,000 positions for each rating level between 1100 and 1900</p>
+        <p><b> Maia captures human style at its specified skill level</b></p>
+        <p>Lower Maias best predict moves played by lower-rated players, whereas higher Maias predict moves made by
+          higher-rated players.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 
-        <div class="text_column">
-          <p>We tested each Maia on 500,000 positions for each rating level between 1100 and 1900</p>
-          <p><b> Maia captures human style at its specified skill level</b></p>
-          <p>Lower Maias best predict moves played by lower-rated players, whereas higher Maias predict moves made by
-            higher-rated players.</p>
-        </div>
-      </div>
-      <p>Maia is fun to play and will help you learn how to get to the next level. It is an ongoing research project by a team
-        at the University of Toronto, Cornell University, and Microsoft Research.</p>
-      </div>
+<div class="container content-section text-center details_slide">
+  <div class="row">
+    <div class="col-lg-7">
+      <canvas id="sf_lines" class="line_plot animate_hidden"></canvas>
+      <script>draw_main_line_plot(sf_data,'sf_lines')</script>
+    </div>
+    <div class="col-lg-4 col-lg-offset-1">
+      <div class="text_column">
+        <p>Looked at how Stockfish compares to maia</p>
       </div>
     </div>
   </div>
+</div>
+</div>
+
+<div class="container content-section text-center details_slide">
+  <div class="row">
+    <div class="col-lg-7">
+      <canvas id="leela_lines" class="line_plot animate_hidden"></canvas>
+      <script>draw_main_line_plot(leela_data, 'leela_lines')</script>
+    </div>
+    <div class="col-lg-4 col-lg-offset-1">
+      <div class="text_column">
+        <p>Looked at how Leela compares to maia</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 </section>
 
 <section id="data" class="container content-section text-center">
@@ -141,8 +170,4 @@ title: Maia Chess
   </div>
 </section>
 
-<script src="{{ '/assets/js/jquery.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/jquery.easing.min.js' | relative_url }}"></script>
 
-<script src="{{ "/assets/grayscale/scripts.js" | relative_url }}"></script>
