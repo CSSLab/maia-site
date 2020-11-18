@@ -57,3 +57,17 @@
     font-size: 2rem;
     white-space: pre-wrap;
 }
+footer {
+    background: gray;
+}
+
+.footer-container {
+    display:  flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    opacity: .8;
+    font-size: 1.5rem;
+    text-align: left;
+
+}
