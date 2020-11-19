@@ -53,25 +53,29 @@ title: Maia Chess
 </div>
 <div class="container content-section text-center details_slide">
   <div class="row">
-    <div class="col-lg-6 col-lg-offset-2">
+    <div class="col-lg-4">
       <p>We trained 9 versions of Maia, one for each Elo milestone between 1100 and 1900. Each version learned from 12 million
         human games.</p>
       <p>We measure “move-matching accuracy”, how often Maia’s move is the same as the human move played in real online games
       </p>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-8">
       <figure class="animate_hidden">
-        <img src="{{ '/assets/images/example_board.png' | relative_url }}" alt="example board" width="100%">
-        <figcaption>In this position, Maia levels 1100–1400 correctly predict that White will play the tempting but wrong
-          move
-          b6 (the move
-          played in the game). It threatens the Queen, but after …Qxc5 White’s big advantage is mostly gone. Maia levels
-          1500–1900
-          predict that, on average, players rated 1500 and above will play the correct bxa6, forcing the Queenside open to
-          decisive effect.
-        </figcaption>
-      </figure>
-    </div>
+        <!--<img src="{{ '/assets/images/example_board.png' | relative_url }}" alt="example board" width="100%">
+          <figcaption>In this position, Maia levels 1100–1400 correctly predict that White will play the tempting but wrong
+            move
+            b6 (the move
+            played in the game). It threatens the Queen, but after …Qxc5 White’s big advantage is mostly gone. Maia levels
+            1500–1900
+            predict that, on average, players rated 1500 and above will play the correct bxa6, forcing the Queenside open to
+            decisive effect.
+          </figcaption>
+          </figure>
+          </div>
+        -->
+        <iframe  class='widget_embed' src="https://csslab.github.io/Maia-Agreement-Visualizer/embed"></iframe>
+
+
   </div>
   </div>
 </div>

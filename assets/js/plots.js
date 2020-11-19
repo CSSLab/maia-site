@@ -2,6 +2,8 @@ var maia_colour = "rgb(89,21,126)";
 var sf_colour = "rgb(33,145,141)";
 var leela_colour = "rgb(112,124,144)";
 
+var image_downloads = {};
+
 leela_dash = [30, 10];
 sf_dash = [40, 20, 15, 20];
 
@@ -77,7 +79,6 @@ collected_data = {
     ]
 };
 
-
 var line_plt_options = {
     tooltips: {
         enabled: false,
@@ -130,6 +131,6 @@ function draw_main_line_plot(data_set, canvas_id) {
         data: data_set,
         options: line_plt_options
     };
-    TestLineChart = new Chart(ctx, config);
+    lineChart = new Chart(ctx, config);
 }
 
