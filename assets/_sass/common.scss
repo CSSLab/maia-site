@@ -20,13 +20,33 @@ code {
 
 .details_section {
   width: 100%;
-  background: rgb(201, 193, 193);
 }
 
 .details_slide {
   min-height: 30vh;
+  width: 100%;
 }
 
+
+.details_section > .details_slide:nth-child(1) {
+  background: rgb(201, 193, 193);
+}
+
+.details_section > .details_slide:nth-child(2) {
+  background: rgb(180, 168, 168);
+}
+.details_section > .details_slide:nth-child(3) {
+  background: rgb(218, 194, 194);
+}
+.details_section > .details_slide:nth-child(4) {
+  background: rgb(197, 167, 167);
+}
+.details_section > .details_slide:nth-child(5) {
+  background: rgb(214, 167, 167);
+}
+.details_section > .details_slide:nth-child(6) {
+  background: rgb(214, 156, 156);
+}
 .animate_hidden {
   visibility: visible;
 }
