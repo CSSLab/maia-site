@@ -4,40 +4,38 @@ title: Maia Chess
 ---
 
 <section id="page-top" class="intro">
-  <div class="intro-body container row">
-      <div class="col-md-8 col-md-offset-2">
-        <h1>Maia Chess</h1>
-        <p class="intro-text">
-          A human like chess engine
-        </p>
-        <a href="#main_info" class="btn btn-circle page-scroll">
-          <i class="fa fa-angle-double-down animated"></i>
-        </a>
-      </div>
+  <div class="intro-body">
+      <h1>Maia Chess</h1>
+      <p class="intro-text">
+        A human like chess engine
+      </p>
+      <a href="#main_info" class="btn btn-circle page-scroll">
+        <i class="fa fa-angle-double-down animated"></i>
+      </a>
   </div>
 </section>
 
-<section id="main_info" class="container content-section text-center">
-  <div class="row col-lg-8 col-lg-offset-2">
-    <h2>A human like neural network chess engine</h2>
+<section id="main_info" class="content-section light-section">
+  <div class="container main_info" >
+    <div class="row col-lg-8 col-lg-offset-2">
+      <h2>A human like neural network chess engine</h2>
 
-    <canvas id="maia_bars" height="100"></canvas>
-    <script>draw_main_bar_plot()</script>
+      <canvas id="maia_bars" height="100"></canvas>
+      <script>draw_main_bar_plot()</script>
 
-    <p>
-      Maia is trained on millions of human chess games to predict the human moves
-      at specific Elo levels.
-    </p>
+      <p>Maia is trained on millions of human chess games to predict the human moves at specific Elo levels.
+      </p>
+    </div>
   </div>
 </section>
 
 
-<section id="details" class="details_section">
-  <div class="content-section text-center details_slide">
+<section id="details" class="content-section details_section">
+  <div class="content-section details_slide">
   <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <figure class="animate_hidden">
+      <figure>
         <img src="{{ '/assets/images/observer-diagram.svg' | relative_url }}" alt="observer diagram">
         <figcaption>
           Schematic of Leela playing itself versus Maia watching humans play TEMP
@@ -53,7 +51,7 @@ title: Maia Chess
   </div>
   </div>
 </div>
-<div class="content-section text-center details_slide">
+<div class="content-section details_slide">
   <div class="container">
   <div class="row">
     <div class="col-lg-4">
@@ -63,7 +61,7 @@ title: Maia Chess
       </p>
     </div>
     <div class="col-lg-8">
-      <figure class="animate_hidden">
+      <figure>
         <!--<img src="{{ '/assets/images/example_board.png' | relative_url }}" alt="example board" width="100%">
           <figcaption>In this position, Maia levels 1100–1400 correctly predict that White will play the tempting but wrong
             move
@@ -77,16 +75,14 @@ title: Maia Chess
           </div>
         -->
         <iframe  class='widget_embed' src="https://csslab.github.io/Maia-Agreement-Visualizer"></iframe>
-
-
   </div>
   </div>
   </div>
 </div>
-<div class="container content-section text-center details_slide">
+<div class="container content-section details_slide">
   <div class="container">
   <div class="row">
-    <div class="col-lg-7 animate_hidden">
+    <div class="col-lg-7">
       <canvas id="maia_lines" class="line_plot" ></canvas>
       <script>draw_main_line_plot(maia_data, 'maia_lines')</script>
     </div>
@@ -103,16 +99,19 @@ title: Maia Chess
   </div>
 </div>
 
-<div class="container content-section text-center details_slide">
+<div class="container content-section details_slide">
   <div class="container">
   <div class="row">
-    <div class="col-lg-7 animate_hidden">
+    <div class="col-lg-7">
       <canvas id="sf_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(sf_data,'sf_lines')</script>
     </div>
     <div class="col-lg-4 col-lg-offset-1">
       <div class="text_column">
-        <p>Looked at how Stockfish compares to maia</p>
+        <p>As a comparison we looked at how Stockfish does on the same prediction task. We ran different depth limited Stockfish, letting it only consider the current board (D01) to letting it look 15 positions ahead (D15).</p>
+        <p>
+          As you can see Stockfish does not perform as well as Maia, and that is better at predicting the moves of stronger players. Interestingly we do see that limiting Stockfish to look at only the current board (D01) is better at predicting moves than letting it do a shallow search (D07).
+        </p>
       </div>
     </div>
   </div>
@@ -120,32 +119,33 @@ title: Maia Chess
 </div>
 </div>
 
-<div class="container content-section text-center details_slide">
+<div class="container content-section details_slide">
   <div class="container">
   <div class="row">
-    <div class="col-lg-7 animate_hidden">
+    <div class="col-lg-7">
       <canvas id="leela_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(leela_data, 'leela_lines')</script>
     </div>
     <div class="col-lg-4 col-lg-offset-1">
       <div class="text_column">
-        <p>Looked at how Leela compares to maia</p>
+        <p>We also compared against a variety of Leela chess models. Here you can see the move prediction accuracy of Leela at different stages of training. Starting at the very weak 800 rating going to 3200 rating through only self play.</p>
+        <p>Like Stockfish we see that Leela is better at predicting stronger players, but overall it is still worse than Maia.</p>
       </div>
     </div>
   </div>
   </div>
 </div>
 
-<div class="container content-section text-center details_slide">
+<div class="container content-section details_slide">
   <div class="container">
   <div class="row">
-    <div class="col-lg-7 animate_hidden">
+    <div class="col-lg-7">
       <canvas id="all_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(collected_data, 'all_lines')</script>
     </div>
     <div class="col-lg-4 col-lg-offset-1">
       <div class="text_column">
-        <p>Looked at all of them together</p>
+        <p>Here are all three different models plotted together</p>
         <p>The code for training Maia can be found on our <a href="https://github.com/CSSLab/maia-chess">Github Repo</a>.
       </div>
     </div>
@@ -157,9 +157,11 @@ title: Maia Chess
 
 </section>
 
-<section id="data" class="container content-section text-center">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2   left-justify-section">
+
+
+<section id="data" class="content-section">
+  <div class="container">
+    <div class="row col-lg-8 col-lg-offset-2 left-justify-section">
       <h2>Data</h2>
       <p> All our data is from the wonderful archive at <a href="https://database.lichess.org/">database.lichess.org</a>. The data provided there is in pgn format which we converted to CSVs, the download for the CSV we used for testing can be found at <a href="http://csslab.cs.toronto.edu/datasets/#maia_kdd">csslab.cs.toronto.edu/datasets</a> information about using it</p>
       <p>If you want the full dataset we used for training the models please get in touch</p>
@@ -167,10 +169,10 @@ title: Maia Chess
   </div>
 </section>
 
-<section id="paper" class="container content-section text-center paper-section">
-  <div class="row">
-    <h2>paper</h2>
-    <div class="col-lg-10 col-lg-offset-1 left-justify-section ">
+<section id="paper" class="content-section light-section">
+  <div class="container">
+    <div class="row col-lg-8 col-lg-offset-2 left-justify-section">
+      <h2>paper</h2>
 
         <p> Our paper was published in KDD, 2020, the full paper can be found on <a
             href="https://arxiv.org/abs/2006.01855">arXiv</a>.</p>
@@ -185,28 +187,28 @@ title: Maia Chess
 
       We develop and introduce Maia, a customized version of Alpha-Zero trained on human chess games, that predicts human moves at a much higher accuracy than existing engines, and can achieve maximum accuracy when predicting decisions made by players at a specific skill level in a tuneable way. For a dual task of predicting whether a human will make a large mistake on the next move, we develop a deep neural network that significantly outperforms competitive baselines. Taken together, our results suggest that there is substantial promise in designing artificial intelligence systems with human collaboration in mind by first accurately modeling granular human decision-making.
       </p>
-      <h2>BibTex</h2>
-      <code>@inproceedings{mcilroyyoung2020maia,
+      <h3>BibTex</h3>
+<code>@inproceedings{mcilroyyoung2020maia,
 title={Aligning Superhuman AI with Human Behavior: Chess as a Model System},
 author={McIlroy-Young, Reid and Sen, Siddhartha and Kleinberg, Jon and Anderson, Ashton},
 year={2020},
 booktitle={Proceedings of the 25th ACM SIGKDD international conference on Knowledge discovery and data mining}
 }</code>
     </div>
-
   </div>
 </section>
 
-<section id="team" class="container content-section text-center people-section row">
+<section id="team" class="content-section">
+  <div class="container">
     <div class="row col-lg-10 col-lg-offset-1">
       <h2>Team</h2>
       {% include people-list.html %}
     </div>
-
+  </div>
 </section>
 
-<section id="acknowledgments" class="container content-section text-center">
-  <div class="row">
+<section id="acknowledgments" class="content-section light-section">
+  <div class="container">
     <div class="col-lg-8 col-lg-offset-2  left-justify-section">
       <h2>Acknowledgments</h2>
       <p>This is an ongoing research project by a team at

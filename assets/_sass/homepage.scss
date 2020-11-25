@@ -1,3 +1,11 @@
+$light_background: rgb(218, 152, 152);
+$dark_background: rgb(116, 57, 57);
+$black: #222;
+
+
+
+
+
 .homepage {
   h1 {
     font-size: 3.4rem;
@@ -96,4 +104,50 @@
     }
     text-align: center;
   }
+}
+
+
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: $black;
+  background: white;
+}
+
+
+.content {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.animate_hidden {
+  visibility: visible;
+}
+
+.animate_unhidden {
+  visibility: visible;
+}
+
+.fadeIn{
+  //animation-name: fadeIn;
+  //-webkit-animation-name: fadeIn;
+
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }

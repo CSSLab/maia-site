@@ -1,6 +1,39 @@
-.people-section {
-  width: 100%;
-  background: rgb(218, 152, 152);
+:root {
+  --light_background: rgb(218, 152, 152);
+  --dark_background: rgb(148, 95, 95);
+}
+
+body {
+    background-color: var(--dark_background);
+}
+
+code {
+  display: block;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+h3 {
+    color: rgb(43, 43, 43);
+    text-align: left;
+    font-weight: 600;
+}
+
+.content-section  {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.light-section {
+  background: var(--light_background);
+}
+
+.main_info {
+    text-align: center;
 }
 
 .people-list {
@@ -9,6 +42,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
+    text-align: center;
 }
 
 .person {
@@ -60,6 +94,36 @@
     font-size: 2rem;
     white-space: pre-wrap;
 }
+
+.details_section {
+  width: 100%;
+}
+
+.details_slide {
+  min-height: 80vh;
+  width: 100%;
+}
+
+.details_section > .details_slide:nth-child(1) {
+  background: rgb(201, 193, 193);
+}
+.details_section > .details_slide:nth-child(2) {
+  background: rgb(180, 168, 168);
+}
+.details_section > .details_slide:nth-child(3) {
+  background: rgb(218, 194, 194);
+}
+.details_section > .details_slide:nth-child(4) {
+  background: rgb(197, 167, 167);
+}
+.details_section > .details_slide:nth-child(5) {
+  background: rgb(214, 167, 167);
+}
+.details_section > .details_slide:nth-child(6) {
+  background: rgb(214, 156, 156);
+}
+
+
 footer {
     background: gray;
 }
@@ -79,10 +143,11 @@ footer {
 }
 
 .widget_embed {
-    width:100%;
-    height:80vh;
+    width:1000px;
+    height:1200px;
     background-color: transparent;
     border: 0px none transparent;
     padding: 0px;
     overflow: hidden;
 }
+
