@@ -20,7 +20,7 @@ title: Maia Chess
     <div class="row col-lg-8 col-lg-offset-2">
       <h2>A human like neural network chess engine</h2>
 
-      <canvas id="maia_bars" height="100"></canvas>
+      <canvas id="maia_bars" class="plot_div"></canvas>
       <script>draw_main_bar_plot()</script>
 
       <p>Maia is trained on millions of human chess games to predict the human moves at specific Elo levels.
@@ -83,8 +83,10 @@ title: Maia Chess
   <div class="container">
   <div class="row">
     <div class="col-lg-7">
-      <canvas id="maia_lines" class="line_plot" ></canvas>
+      <div class="line_plot_container">
+      <canvas id="maia_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(maia_data, 'maia_lines')</script>
+      </div>
     </div>
     <div class="col-lg-4 col-lg-offset-1">
       <div class="text_column">
@@ -153,6 +155,21 @@ title: Maia Chess
   </div>
 </div>
 
+<div class="container content-section details_slide">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        TODO
+      </div>
+      <div class="col-lg-4 col-lg-offset-1">
+        <div class="text_column">
+          <p>Maia gains much of it's performance by predicitng mistakes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 
 </section>
@@ -187,13 +204,14 @@ title: Maia Chess
 
       We develop and introduce Maia, a customized version of Alpha-Zero trained on human chess games, that predicts human moves at a much higher accuracy than existing engines, and can achieve maximum accuracy when predicting decisions made by players at a specific skill level in a tuneable way. For a dual task of predicting whether a human will make a large mistake on the next move, we develop a deep neural network that significantly outperforms competitive baselines. Taken together, our results suggest that there is substantial promise in designing artificial intelligence systems with human collaboration in mind by first accurately modeling granular human decision-making.
       </p>
-      <h3>BibTex</h3>
+<!--<h3>BibTex</h3>
 <code>@inproceedings{mcilroyyoung2020maia,
 title={Aligning Superhuman AI with Human Behavior: Chess as a Model System},
 author={McIlroy-Young, Reid and Sen, Siddhartha and Kleinberg, Jon and Anderson, Ashton},
 year={2020},
 booktitle={Proceedings of the 25th ACM SIGKDD international conference on Knowledge discovery and data mining}
 }</code>
+-->
     </div>
   </div>
 </section>

@@ -2,6 +2,8 @@ var maia_colour = "rgb(89,21,126)";
 var sf_colour = "rgb(33,145,141)";
 var leela_colour = "rgb(112,124,144)";
 
+Chart.defaults.global.defaultFontColor = '#ccc';
+
 var image_downloads = {};
 
 leela_dash = [30, 10];
@@ -85,7 +87,7 @@ var line_plt_options = {
     },
     legend: {
         display: true,
-        position: 'right',
+        position: 'bottom',
         labels: {
             fontSize: 16,
             boxWidth: 1,

@@ -1,6 +1,6 @@
 :root {
-  --light_background: rgb(218, 152, 152);
-  --dark_background: rgb(148, 95, 95);
+  --light_background: rgb(97, 148, 156);
+  --dark_background: rgb(29, 36, 37);
 }
 
 body {
@@ -17,6 +17,10 @@ h3 {
     color: rgb(43, 43, 43);
     text-align: left;
     font-weight: 600;
+}
+
+.intro {
+  background-color: var(--dark_background);
 }
 
 .content-section  {
@@ -97,7 +101,6 @@ h3 {
 
 .details_section {
   width: 100%;
-  background: rgb(201, 193, 193);
 }
 
 .details_slide {
@@ -105,6 +108,27 @@ h3 {
   width: 100%;
 }
 
+.details_section > .details_slide:nth-child(1) {
+  background-color: var(--dark_background);
+}
+.details_section > .details_slide:nth-child(2) {
+  background-color: var(--light_background);
+}
+.details_section > .details_slide:nth-child(3) {
+  background-color: var(--dark_background);
+}
+.details_section > .details_slide:nth-child(4) {
+  background-color: var(--light_background);
+}
+.details_section > .details_slide:nth-child(5) {
+  background-color: var(--dark_background);
+}
+.details_section > .details_slide:nth-child(7) {
+  background-color: var(--light_background);
+}
+
+
+/*
 .details_section > .details_slide:nth-child(1) {
   background: rgb(201, 193, 193);
 }
@@ -123,7 +147,15 @@ h3 {
 .details_section > .details_slide:nth-child(6) {
   background: rgb(214, 156, 156);
 }
+*/
 
+.line_plot_container {
+  position:relative;
+  margin: auto;
+  /*height: 60vh;
+  width : 100%;
+  */
+}
 
 footer {
     background: gray;
