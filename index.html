@@ -29,7 +29,6 @@ title: Maia Chess
   </div>
 </section>
 
-
 <section id="details" class="content-section details_section">
   <div class="content-section details_slide">
   <div class="container">
@@ -105,49 +104,17 @@ title: Maia Chess
   <div class="container">
   <div class="row">
     <div class="col-lg-7">
-      <canvas id="sf_lines" class="line_plot"></canvas>
-      <script>draw_main_line_plot(sf_data,'sf_lines')</script>
-    </div>
-    <div class="col-lg-4 col-lg-offset-1">
-      <div class="text_column">
-        <p>As a comparison we looked at how Stockfish does on the same prediction task. We ran different depth limited Stockfish, letting it only consider the current board (D01) to letting it look 15 positions ahead (D15).</p>
-        <p>
-          As you can see Stockfish does not perform as well as Maia, and that is better at predicting the moves of stronger players. Interestingly we do see that limiting Stockfish to look at only the current board (D01) is better at predicting moves than letting it do a shallow search (D07).
-        </p>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-</div>
-
-<div class="container content-section details_slide">
-  <div class="container">
-  <div class="row">
-    <div class="col-lg-7">
-      <canvas id="leela_lines" class="line_plot"></canvas>
-      <script>draw_main_line_plot(leela_data, 'leela_lines')</script>
-    </div>
-    <div class="col-lg-4 col-lg-offset-1">
-      <div class="text_column">
-        <p>We also compared against a variety of Leela chess models. Here you can see the move prediction accuracy of Leela at different stages of training. Starting at the very weak 800 rating going to 3200 rating through only self play.</p>
-        <p>Like Stockfish we see that Leela is better at predicting stronger players, but overall it is still worse than Maia.</p>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-
-<div class="container content-section details_slide">
-  <div class="container">
-  <div class="row">
-    <div class="col-lg-7">
+      <div class='line_plot_container'>
       <canvas id="all_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(collected_data, 'all_lines')</script>
     </div>
+    </div>
     <div class="col-lg-4 col-lg-offset-1">
       <div class="text_column">
-        <p>Here are all three different models plotted together</p>
+        <p>As a comparison we looked at how Stockfish does on the same prediction task. We ran different depth limited
+          Stockfish, letting it only consider the current board (D01) to letting it look 15 positions ahead (D15).</p>
+          <p>We also compared against a variety of Leela chess models. Here you can see the move prediction accuracy of Leela at
+            different stages of training. Starting at the very weak 800 rating going to 3200 rating through only self play.</p>
         <p>The code for training Maia can be found on our <a href="https://github.com/CSSLab/maia-chess">Github Repo</a>.
       </div>
     </div>
@@ -159,22 +126,21 @@ title: Maia Chess
   <div class="container">
     <div class="row">
       <div class="col-lg-7">
-        TODO
+        <div class='line_plot_container'>
+        <canvas id="data_delta" class="line_plot"></canvas>
+        <script>draw_main_line_plot(data_delta, 'data_delta', true)</script>
+        </div>
       </div>
       <div class="col-lg-4 col-lg-offset-1">
         <div class="text_column">
-          <p>Maia gains much of it's performance by predicitng mistakes</p>
+          <p>Maia gains much of it's performance by predicting mistakes</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 </div>
-
 </section>
-
-
 
 <section id="data" class="content-section">
   <div class="container">

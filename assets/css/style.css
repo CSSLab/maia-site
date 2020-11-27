@@ -3,6 +3,14 @@
   --dark_background: rgb(29, 36, 37);
 }
 
+ @media only screen and (max-width: 400px) {
+   .container {
+     padding-left: 0;
+     padding-right: 0;
+   }
+ }
+
+
 body {
     background-color: var(--dark_background);
 }
@@ -55,7 +63,9 @@ h3 {
     background: gray;
     align-items: stretch;
     justify-content: space-between;
-    min-width: 400px;
+    min-width: 270px;
+    flex: 0 0 0px;
+    margin: 10px;
 }
 
 .person-line {
@@ -87,7 +97,7 @@ h3 {
 }
 .person-image {
     width: 200px;
-    height: auto;
+    height: 200px;
 }
 
 .left-justify-section > p {
@@ -152,9 +162,8 @@ h3 {
 .line_plot_container {
   position:relative;
   margin: auto;
-  /*height: 60vh;
   width : 100%;
-  */
+  max-width: 600px;
 }
 
 footer {
