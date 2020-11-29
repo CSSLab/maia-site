@@ -12,13 +12,17 @@
 
 
 body {
-    background-color: var(--dark_background);
+    background-color: var(--light_background);
 }
 
 code {
   display: block;
   white-space: pre-wrap;
   text-align: left;
+}
+
+h2 {
+  margin-left: 1em;
 }
 
 h3 {
@@ -38,16 +42,16 @@ h3 {
     justify-content: space-evenly;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    background: var(--dark_background);
 }
 
 
 
 @media only screen and (max-width: 600px) {
   .acks > div >div > h2 {
-    font-size: 20pt;
+    font-size: 16pt;
   }
 }
-
 
 .light-section {
   background: var(--light_background);
@@ -123,10 +127,12 @@ h3 {
 }
 
 .details_section {
+  padding-top: 0;
   width: 100%;
 }
 
 .details_slide {
+
   min-height: 80vh;
   width: 100%;
 }

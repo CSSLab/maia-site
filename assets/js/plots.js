@@ -85,6 +85,9 @@ collected_data = {
     ]
 };
 
+var axis_font_size = $(window).width() < 800 ? 16 : 25;
+var axis_ticks_size = $(window).width() < 800 ? 12 : 20;
+
 var line_plt_options = {
     aspectRatio: $(window).width() < 800 ? .7 : 1.2,
     tooltips: {
@@ -94,7 +97,7 @@ var line_plt_options = {
         display: true,
         position: 'bottom',
         labels: {
-            fontSize: 16,
+            fontSize: $(window).width() < 800 ? 12 : 16,
             boxWidth: 1,
         },
     },
@@ -103,24 +106,24 @@ var line_plt_options = {
             scaleLabel: {
                 display: true,
                 labelString: 'Rating',
-                fontSize: 30,
+                fontSize: axis_font_size,
             },
             gridLines: {
                 display: false,
             },
             ticks: {
-                fontSize: 20,
+                fontSize: axis_ticks_size,
             },
         }],
         yAxes: [{
             scaleLabel: {
                 display: true,
                 labelString: 'Accuracy',
-                fontSize: 30,
+                fontSize: axis_font_size,
             },
 
             ticks: {
-                fontSize: 20,
+                fontSize: axis_ticks_size,
                 //min: .33,
                 //max: .53,
             },
