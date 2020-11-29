@@ -145,6 +145,9 @@ function draw_main_line_plot(data_set, canvas_id, is_delta) {
         config.options.scales.xAxes[0].scaleLabel.labelString ='Move quality relative to optimal move';
         if ($(window).width() < 800) {
             config.options.scales.xAxes[0].scaleLabel.fontSize = 16;
+            if ($(window).width() < 400) {
+                config.options.scales.xAxes[0].scaleLabel.fontSize = 12;
+            }
         }
     }
     lineChart = new Chart(ctx, config);
