@@ -2,7 +2,7 @@ var maia_colour = "rgb(89,21,126)";
 var sf_colour = "rgb(33,145,141)";
 var leela_colour = "rgb(112,124,144)";
 
-Chart.defaults.global.defaultFontColor = '#ccc';
+Chart.defaults.global.defaultFontColor = '#222';
 
 var image_downloads = {};
 

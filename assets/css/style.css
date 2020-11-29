@@ -1,14 +1,14 @@
 :root {
-  --light_background: rgb(97, 148, 156);
+  --light_background: rgb(207, 207, 207);
   --dark_background: rgb(29, 36, 37);
 }
 
- @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
    .container {
      padding-left: 0;
      padding-right: 0;
    }
- }
+}
 
 
 body {
@@ -40,12 +40,25 @@ h3 {
     padding-bottom: 5rem;
 }
 
+
+
+@media only screen and (max-width: 600px) {
+  .acks > div >div > h2 {
+    font-size: 20pt;
+  }
+}
+
+
 .light-section {
   background: var(--light_background);
 }
 
 .main_info {
     text-align: center;
+}
+
+.observer-diagram {
+  width: 100%;
 }
 
 .people-list {
@@ -118,20 +131,21 @@ h3 {
   width: 100%;
 }
 
+
 .details_section > .details_slide:nth-child(1) {
-  background-color: var(--dark_background);
+  background-color: var(--light_background);
 }
 .details_section > .details_slide:nth-child(2) {
   background-color: var(--light_background);
 }
 .details_section > .details_slide:nth-child(3) {
-  background-color: var(--dark_background);
+  background-color: var(--light_background);
 }
 .details_section > .details_slide:nth-child(4) {
   background-color: var(--light_background);
 }
 .details_section > .details_slide:nth-child(5) {
-  background-color: var(--dark_background);
+  background-color: var(--light_background);
 }
 .details_section > .details_slide:nth-child(7) {
   background-color: var(--light_background);
@@ -184,6 +198,11 @@ footer {
     text-align: left;
 }
 
+@media only screen and (max-width: 600px) {
+  .footer-container > p {
+      width: 100%;
+  }
+}
 .widget_embed {
     width:1000px;
     height:1200px;
