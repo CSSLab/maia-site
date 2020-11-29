@@ -55,6 +55,7 @@ h3 {
 
 .light-section {
   background: var(--light_background);
+  color: rgb(43, 43, 43);
 }
 
 .main_info {
@@ -132,7 +133,7 @@ h3 {
 }
 
 .details_slide {
-
+  color: rgb(43, 43, 43);
   min-height: 80vh;
   width: 100%;
 }
