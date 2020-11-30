@@ -218,6 +218,9 @@ h4 {
     max-width: 90vw;
     padding-bottom: 2em;
   }
+  figcaption {
+    padding-bottom: 2em;
+  }
 }
 
 footer {
@@ -241,6 +244,8 @@ footer {
 @media only screen and (max-width: 600px) {
   .footer-container > p {
       width: 100%;
+      padding-left:1em;
+      padding-right:1em;
   }
 }
 .widget_embed {
