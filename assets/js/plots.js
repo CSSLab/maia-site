@@ -10,7 +10,7 @@ Chart.defaults.global.defaultFontColor = '#222';
 var image_downloads = {};
 
 leela_dash = [30, 10];
-sf_dash = [40, 20, 15, 20];
+sf_dash = [10, 5];
 
 function draw_main_bar_plot() {
     var ctx = document.getElementById('maia_bars').getContext('2d');

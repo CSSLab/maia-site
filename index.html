@@ -24,6 +24,7 @@ title: Maia Chess
       <script>draw_main_bar_plot()</script>
 
       <p style="margin-top:1cm;text-align:left">Maia’s goal is to play the <b>human</b> move — not necessarily the best move. As a result, Maia has a more human-like style than previous engines, matching moves played by human players in online games over 50% of the time.
+
       </p>
     </div>
   </div>
@@ -35,7 +36,7 @@ title: Maia Chess
   <div class="row"> 
     <div class="col-lg-6">
       <figure>
-        <img src="{{ '/assets/images/observer-diagram.png' | relative_url }}" alt="observer diagram" class="observer-diagram">
+        <img src="{{ '/assets/images/observer-diagram_transparent.png' | relative_url }}" alt="observer diagram" class="observer-diagram">
         <figcaption>
           During training, Maia is given a position that occurred in a real human game and tries to predict which move was made. After seeing hundreds of millions of positions, Maia accurately captures how people at different levels play chess. 
         </figcaption>
@@ -92,6 +93,7 @@ title: Maia Chess
       <div class="line_plot_container">
       <canvas id="maia_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(maia_data, 'maia_lines')</script>
+      {% include noscript_plot.html %}
       </div>
     </div>
     <div class="col-lg-6">
@@ -113,6 +115,7 @@ title: Maia Chess
       <div class='line_plot_container'>
       <canvas id="all_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(collected_data, 'all_lines')</script>
+      {% include noscript_plot.html %}
     </div>
     </div>
     <div class="col-lg-6 ">
@@ -135,6 +138,7 @@ title: Maia Chess
         <div class='line_plot_container'>
         <canvas id="data_delta" class="line_plot"></canvas>
         <script>draw_main_line_plot(data_delta, 'data_delta', true)</script>
+        {% include noscript_plot.html %}
         </div>
       </div>
       <div class="col-lg-6">
@@ -171,6 +175,7 @@ title: Maia Chess
 
       <h4 style="margin-top:2cm">Abstract</h4>
       <p style="font-size:11pt;">
+
       As artificial intelligence becomes increasingly intelligent---in some cases, achieving superhuman performance---there is growing potential for humans to learn from and collaborate with algorithms. However, the ways in which AI systems approach problems are often different from the ways people do, and thus may be uninterpretable and hard to learn from. A crucial step in bridging this gap between human and artificial intelligence is modeling the granular actions that constitute human behavior, rather than simply matching aggregate human performance.
 
       We pursue this goal in a model system with a long history in artificial intelligence: chess. The aggregate performance of a chess player unfolds as they make decisions over the course of a game. The hundreds of millions of games played online by players at every skill level form a rich source of data in which these decisions, and their exact context, are recorded in minute detail. Applying existing chess engines to this data, including an open-source implementation of AlphaZero, we find that they do not predict human moves well.
