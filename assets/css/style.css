@@ -71,6 +71,7 @@ h4 {
     margin-left: 1em;
     margin-right: 1em;
     text-align:justify;
+    padding-right:.5em
   }
 }
 
@@ -104,7 +105,10 @@ h4 {
     justify-content: space-between;
     min-width: 270px;
     flex: 0 0 0px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .person-line {
@@ -166,27 +170,6 @@ h4 {
 .details_section > .details_slide {
   background-color: var(--light_background);
 }
-
-/*
-.details_section > .details_slide:nth-child(1) {
-  background: rgb(201, 193, 193);
-}
-.details_section > .details_slide:nth-child(2) {
-  background: rgb(180, 168, 168);
-}
-.details_section > .details_slide:nth-child(3) {
-  background: rgb(218, 194, 194);
-}
-.details_section > .details_slide:nth-child(4) {
-  background: rgb(197, 167, 167);
-}
-.details_section > .details_slide:nth-child(5) {
-  background: rgb(214, 167, 167);
-}
-.details_section > .details_slide:nth-child(6) {
-  background: rgb(214, 156, 156);
-}
-*/
 
 .models_table td, .models_table th {
   text-align: center;
