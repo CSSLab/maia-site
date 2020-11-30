@@ -1,6 +1,9 @@
-var maia_colour = "rgb(89,21,126)";
-var sf_colour = "rgb(33,145,141)";
-var leela_colour = "rgb(112,124,144)";
+var maia_colour = "#354A54";
+// var maia_colour = "rgb(89,21,126)";
+// var sf_colour = "rgb(33,145,141)";
+var sf_colour = "rgb(150,150,150)";
+// var leela_colour = "rgb(112,124,144)";
+var leela_colour = "rgb(150,150,150)";
 
 Chart.defaults.global.defaultFontColor = '#222';
 
@@ -41,14 +44,14 @@ function draw_main_bar_plot() {
             scales: {
                 xAxes: [{
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Model',
                     },
                 }],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: 'Accuracy',
+                        labelString: 'Move-matching Accuracy',
                     },
                     ticks: {
                         beginAtZero: true
@@ -85,8 +88,8 @@ collected_data = {
     ]
 };
 
-var axis_font_size = $(window).width() < 800 ? 16 : 25;
-var axis_ticks_size = $(window).width() < 800 ? 12 : 20;
+var axis_font_size = $(window).width() < 800 ? 16 : 20;
+var axis_ticks_size = $(window).width() < 800 ? 12 : 16;
 
 var line_plt_options = {
     aspectRatio: $(window).width() < 800 ? .7 : 1.2,
@@ -105,7 +108,7 @@ var line_plt_options = {
         xAxes: [{
             scaleLabel: {
                 display: true,
-                labelString: 'Rating',
+                labelString: 'Rating of player being predicted',
                 fontSize: axis_font_size,
             },
             gridLines: {
@@ -118,7 +121,7 @@ var line_plt_options = {
         yAxes: [{
             scaleLabel: {
                 display: true,
-                labelString: 'Accuracy',
+                labelString: 'Move-matching Accuracy',
                 fontSize: axis_font_size,
             },
 

@@ -1,5 +1,8 @@
 :root {
-  --light_background: rgb(255, 248, 231);
+  /*--light_background: rgb(207, 207, 207);*/
+  /*--light_background: rgb(340, 340, 340);*/
+  --light_background: #FFF8ED;
+  /*--light_background: #FFF8E7; */
   --dark_background: rgb(29, 36, 37);
 }
 
@@ -64,9 +67,9 @@ h3 {
   color: rgb(43, 43, 43);
 }
 
-.main_info {
+/*.main_info {
     text-align: center;
-}
+}*/
 
 .observer-diagram {
   width: 100%;

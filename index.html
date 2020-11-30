@@ -7,7 +7,11 @@ title: Maia Chess
   <div class="intro-body">
       <h1>Maia Chess</h1>
       <p class="intro-text">
+<<<<<<< HEAD
         A human-like chess engine
+=======
+        A human-like neural network chess engine
+>>>>>>> b839f237afff4299896707bb0ce2cbfaf53faad8
       </p>
       <a href="#main_info" class="btn btn-circle page-scroll">
         <i class="fa fa-angle-double-down animated"></i>
@@ -18,12 +22,13 @@ title: Maia Chess
 <section id="main_info" class="content-section light-section">
   <div class="container main_info" >
     <div class="row col-lg-8 col-lg-offset-2">
-      <h2>A human like neural network chess engine</h2>
+      <h3><center>Capturing human style in chess</center></h3>
 
       <canvas id="maia_bars" class="bar_plot_div"></canvas>
       <script>draw_main_bar_plot()</script>
-      {% include noscript_plot.html %}
-      <p>Maia is trained on millions of human chess games to predict the human moves at specific Elo levels.
+
+      <p style="margin-top:1cm;text-align:left">Maia’s goal is to play the <b>human</b> move — not necessarily the best move. As a result, Maia has a more human-like style than previous engines, matching moves played by human players in online games over 50% of the time.
+
       </p>
     </div>
   </div>
@@ -37,14 +42,16 @@ title: Maia Chess
       <figure>
         <img src="{{ '/assets/images/observer-diagram_transparent.png' | relative_url }}" alt="observer diagram" class="observer-diagram">
         <figcaption>
-          Maia sees the same chess board as the player, then predicts what move will be made
+          During training, Maia is given a position that occurred in a real human game and tries to predict which move was made. After seeing hundreds of millions of positions, Maia accurately captures how people at different levels play chess.
         </figcaption>
       </figure>
     </div>
     <div class="col-lg-6">
-      <p>Maia is an AlphaZero/Leela Chess Zero-like deep learning framework that learns from online human games instead of self-play</p>
 
-        <p>Maia’s goal is to play the human move—not necessarily the best move</p>
+      <p style="margin-top:1cm;margin-left:0.5cm;"> Maia is an AlphaZero/Leela-like deep learning framework that learns from online human games instead of self-play. Maia is trained on millions of games, and tries to predict the human move played in each position seen.</p>
+      <p style="margin-left:0.5cm;">We trained 9 versions of Maia, one for each Elo milestone between 1100 and 1900. Maia 1100 was only trained on games between 1100-rated players, and so on. Each version learned from 12 million
+        human games, and learns how chess is typically played at its specific level.</p>
+      <p></p>
     </div>
     </div>
   </div>
@@ -54,10 +61,14 @@ title: Maia Chess
   <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <p>We trained 9 versions of Maia, one for each Elo milestone between 1100 and 1900. Each version learned from 12 million
-        human games.</p>
-      <p>We measure “move-matching accuracy”, how often Maia’s move is the same as the human move played in real online games
-      </p>
+
+      <p>We measure “move-matching accuracy”, how often Maia’s predicted move is the same as the human move played in real online games.  </p>
+
+      <p>Because we trained 9 different versions of Maia, each at a targeted skill level, we can begin to algorithmically capture what kinds of mistakes players at specific skill levels make – and when people stop making them. </p>
+
+      <p>In this example, the Maias predict that people stop playing the tempting but wrong move <i>b6</i> at around 1500. </p>
+
+
     </div>
     <div class="col-lg-8">
       <figure>
@@ -80,20 +91,20 @@ title: Maia Chess
 </div>
 <div class="content-section details_slide">
   <div class="container">
+    <h3 style="text-align:center">Maia captures human style at targeted skill levels</h3>
   <div class="row">
-    <div class="col-lg-7">
+    <div class="col-lg-6">
       <div class="line_plot_container">
       <canvas id="maia_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(maia_data, 'maia_lines')</script>
       {% include noscript_plot.html %}
       </div>
     </div>
-    <div class="col-lg-4 col-lg-offset-1">
+    <div class="col-lg-6">
       <div class="text_column">
-        <p>We tested each Maia on 500,000 positions for each rating level between 1100 and 1900</p>
-        <p><b> Maia captures human style at its specified skill level</b></p>
-        <p>Lower Maias best predict moves played by lower-rated players, whereas higher Maias predict moves made by
-          higher-rated players.</p>
+        <p style="margin-left:0.5cm;text-align:justify">We tested each Maia on 9 sets of 500,000 positions that arose in real human games, one for each rating level between 1100 and 1900. Every Maia made a prediction for every position, and we measured its resulting move-matching accuracy on each set. </p>
+        <!-- <p><b> Maia captures human style at its specified skill level</b></p> -->
+        <p style="margin-left:0.5cm;text-align:justify">Each Maia captures human style at its targeted skill level. Lower Maias best predict moves played by lower-rated players, whereas higher Maias predict moves made by higher-rated players.</p>
       </div>
     </div>
     </div>
@@ -104,20 +115,20 @@ title: Maia Chess
 <div class="content-section details_slide">
   <div class="container">
   <div class="row">
-    <div class="col-lg-7">
+    <div class="col-lg-6">
       <div class='line_plot_container'>
       <canvas id="all_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(collected_data, 'all_lines')</script>
       {% include noscript_plot.html %}
     </div>
     </div>
-    <div class="col-lg-4 col-lg-offset-1">
+    <div class="col-lg-6 ">
       <div class="text_column">
-        <p>As a comparison we looked at how Stockfish does on the same prediction task. We ran different depth limited
-          Stockfish, letting it only consider the current board (D01) to letting it look 15 positions ahead (D15).</p>
-          <p>We also compared against a variety of Leela chess models. Here you can see the move prediction accuracy of Leela at
-            different stages of training. Starting at the very weak 800 rating going to 3200 rating through only self play.</p>
-        <p>The code for training Maia can be found on our <a href="https://github.com/CSSLab/maia-chess">Github Repo</a>.
+        <p style="margin-left:0.5cm;text-align:justify">As a comparison, we looked at how depth-limited Stockfish does on the same prediction task. We ran various depth limits, ranging from only considering the current board (D01) to letting it search 15 plies ahead (D15). Depth-limited Stockfish is the most popular engine to play against for fun (e.g. the "Play with the Computer" feature on Lichess).</p>
+          <p style="margin-left:0.5cm;text-align:justify">We also compared against a variety of Leela chess models, ranging from the very weak 800-rated version to a 3200-rating version.</p>
+
+        <p style="margin-left:0.5cm;text-align:justify">Stockfish and Leela models don't predict human moves as well as Maia. Equally importantly, they don't match a targeted skill level: the curves in the graph are relatively flat across a wide range of human skill levels.</p>
+
       </div>
     </div>
   </div>
@@ -127,16 +138,16 @@ title: Maia Chess
 <div class="content-section details_slide">
   <div class="container">
     <div class="row">
-      <div class="col-lg-7">
+      <div class="col-lg-6">
         <div class='line_plot_container'>
         <canvas id="data_delta" class="line_plot"></canvas>
         <script>draw_main_line_plot(data_delta, 'data_delta', true)</script>
         {% include noscript_plot.html %}
         </div>
       </div>
-      <div class="col-lg-4 col-lg-offset-1">
+      <div class="col-lg-6">
         <div class="text_column">
-          <p>Maia gains much of it's performance by predicting mistakes</p>
+          <p style="margin-left:0.5cm;text-align:justify"> Maia is particularly good at predicting human mistakes. The move-matching accuracy of any model increases with the quality of the move, since good moves are easier to predict. But even when players make horrific blunders, Maia correctly predicts the exact blunder they make around 25% of the time. This ability to understand how and when people are likely to make mistakes can make Maia a very useful learning tool.</p>
         </div>
       </div>
     </div>
@@ -149,24 +160,26 @@ title: Maia Chess
   <div class="container">
     <div class="row col-lg-8 col-lg-offset-2 left-justify-section">
       <h2>Data</h2>
-      <p> All our data is from the wonderful archive at <a href="https://database.lichess.org/">database.lichess.org</a>. The data provided there is in pgn format which we converted to CSVs, the download for the CSV we used for testing can be found at <a href="http://csslab.cs.toronto.edu/datasets/#maia_kdd">csslab.cs.toronto.edu/datasets</a> information about using it</p>
-      <p>If you want the full dataset we used for training the models please get in touch</p>
+      <p> All our data is from the wonderful archive at <a href="https://database.lichess.org/">database.lichess.org</a>. We converted the raw PGN raw data dumps into CSV, and have made the CSV we used for testing available at <a href="http://csslab.cs.toronto.edu/datasets/#maia_kdd">csslab.cs.toronto.edu/datasets</a>.</p>
+      <!-- <p>If you want the full dataset we used for training the models please get in touch</p> -->
     </div>
   </div>
 </section>
 
 <section id="paper" class="content-section light-section">
   <div class="container">
-    <div class="row col-lg-8 col-lg-offset-2 left-justify-section">
+    <div class="row col-lg-9 col-lg-offset-2 left-justify-section">
       <h2>paper</h2>
 
-        <p> Our paper was published in KDD, 2020, the full paper can be found on <a
-            href="https://arxiv.org/abs/2006.01855">arXiv</a>.</p>
+        <p> Read the full <a href="https://arxiv.org/abs/2006.01855">research paper on Maia </a>, which was published in the <i>2020 ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2020)</i>.</p>
 
-        <p>You can also find a short video on it <a href="https://crossminds.ai/video/5f3375ad3a683f9107fc6bce/">here</a>.</p>
+        <p>You can read a blog post about Maia <a href="http://csslab.cs.toronto.edu/blog/2020/08/24/maia_chess_kdd/">here</a>.</p>
 
-      <h3>Abstract</h3>
+        <p>The code for training Maia can be found on our <a href="https://github.com/CSSLab/maia-chess">Github Repo</a>.
+
+      <h4 style="margin-top:2cm">Abstract</h4>
       <p class = 'abstract'>
+
       As artificial intelligence becomes increasingly intelligent--in some cases, achieving superhuman performance--there is growing potential for humans to learn from and collaborate with algorithms. However, the ways in which AI systems approach problems are often different from the ways people do, and thus may be uninterpretable and hard to learn from. A crucial step in bridging this gap between human and artificial intelligence is modeling the granular actions that constitute human behavior, rather than simply matching aggregate human performance.
 
       We pursue this goal in a model system with a long history in artificial intelligence: chess. The aggregate performance of a chess player unfolds as they make decisions over the course of a game. The hundreds of millions of games played online by players at every skill level form a rich source of data in which these decisions, and their exact context, are recorded in minute detail. Applying existing chess engines to this data, including an open-source implementation of AlphaZero, we find that they do not predict human moves well.
