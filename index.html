@@ -22,7 +22,7 @@ title: Maia Chess
 
       <canvas id="maia_bars" class="bar_plot_div"></canvas>
       <script>draw_main_bar_plot()</script>
-
+      {% include noscript_plot.html %}
       <p>Maia is trained on millions of human chess games to predict the human moves at specific Elo levels.
       </p>
     </div>
@@ -85,6 +85,7 @@ title: Maia Chess
       <div class="line_plot_container">
       <canvas id="maia_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(maia_data, 'maia_lines')</script>
+      {% include noscript_plot.html %}
       </div>
     </div>
     <div class="col-lg-4 col-lg-offset-1">
@@ -107,6 +108,7 @@ title: Maia Chess
       <div class='line_plot_container'>
       <canvas id="all_lines" class="line_plot"></canvas>
       <script>draw_main_line_plot(collected_data, 'all_lines')</script>
+      {% include noscript_plot.html %}
     </div>
     </div>
     <div class="col-lg-4 col-lg-offset-1">
@@ -129,6 +131,7 @@ title: Maia Chess
         <div class='line_plot_container'>
         <canvas id="data_delta" class="line_plot"></canvas>
         <script>draw_main_line_plot(data_delta, 'data_delta', true)</script>
+        {% include noscript_plot.html %}
         </div>
       </div>
       <div class="col-lg-4 col-lg-offset-1">

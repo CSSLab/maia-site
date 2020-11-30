@@ -1,5 +1,5 @@
 :root {
-  --light_background: rgb(207, 207, 207);
+  --light_background: rgb(255, 248, 231);
   --dark_background: rgb(29, 36, 37);
 }
 
@@ -8,6 +8,10 @@
      padding-left: 0;
      padding-right: 0;
    }
+}
+
+.navbar-custom {
+  background-color: var(--dark_background);
 }
 
 
