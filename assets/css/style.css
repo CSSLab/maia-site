@@ -35,8 +35,12 @@ h2 {
 
 h3 {
     color: rgb(43, 43, 43);
-    text-align: left;
+    text-align: center;
     font-weight: 600;
+}
+
+h4 {
+  margin-top:2cm;
 }
 
 .intro {
@@ -59,7 +63,12 @@ h3 {
   }
   .content-section .container {
     margin-left: 1em;
+    text-align:justify;
   }
+}
+
+.text_column {
+  text-align:justify;
 }
 
 .light-section {
@@ -151,25 +160,9 @@ h3 {
   width: 100%;
 }
 
-.details_section > .details_slide:nth-child(1) {
+.details_section > .details_slide {
   background-color: var(--light_background);
 }
-.details_section > .details_slide:nth-child(2) {
-  background-color: var(--light_background);
-}
-.details_section > .details_slide:nth-child(3) {
-  background-color: var(--light_background);
-}
-.details_section > .details_slide:nth-child(4) {
-  background-color: var(--light_background);
-}
-.details_section > .details_slide:nth-child(5) {
-  background-color: var(--light_background);
-}
-.details_section > .details_slide:nth-child(7) {
-  background-color: var(--light_background);
-}
-
 
 /*
 .details_section > .details_slide:nth-child(1) {
