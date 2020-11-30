@@ -16,8 +16,9 @@
 .navbar-custom {
   background-color: var(--dark_background);
   width: 100vw;
+  padding-left: 1em;
+  padding-right: 1em;
 }
-
 
 body {
     background-color: var(--light_background);
@@ -46,6 +47,11 @@ h4 {
 .intro {
   background-color: var(--dark_background);
 }
+
+.intro {
+  min-height: 100vh;
+}
+
 
 .content-section  {
     min-height: 80vh;
