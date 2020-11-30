@@ -12,6 +12,7 @@
 
 .navbar-custom {
   background-color: var(--dark_background);
+  width: 100vw;
 }
 
 
@@ -209,6 +210,7 @@ h3 {
   }
   .line_plot_container {
     max-width: 90vw;
+    padding-bottom: 2em;
   }
 }
 footer {
