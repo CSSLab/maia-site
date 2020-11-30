@@ -36,7 +36,7 @@ title: Maia Chess
   <div class="row">
     <div class="col-lg-6">
       <figure>
-        <img src="{{ '/assets/images/observer-diagram_transparent.png' | relative_url }}" alt="observer diagram" class="observer-diagram">
+        <img src="{{ '/assets/images/maia-diagram_transparent.png' | relative_url }}" alt="observer diagram" class="observer-diagram">
         <figcaption>
           During training, Maia is given a position that occurred in a real human game and tries to predict which move was made. After seeing hundreds of millions of positions, Maia accurately captures how people at different levels play chess.
         </figcaption>
@@ -155,15 +155,42 @@ title: Maia Chess
 <div class="content-section details_slide">
   <div class="container">
     <div class="row">
+      <div class="col-lg-4 col-lg-offset-2">
+        <h4>Our models are on Lichess</h4>
+        <table class="table models_table">
+          <tr>
+            <th>Name</th>
+            <th>Trained Rating</th>
+          </tr>
+          <tr>
+            <td class="model_name"><a href="https://lichess.org/@/maia1">maia1</a></td>
+            <td class="model_rating">1100</td>
+          </tr>
+          <tr>
+            <td class="model_name"><a href="https://lichess.org/@/maia5">maia5</a></td>
+            <td class="model_rating">1500</td>
+          </tr>
+          <tr>
+            <td class="model_name"><a href="https://lichess.org/@/maia9">maia9</a></td>
+            <td class="model_rating">1900</td>
+          </tr>
+        </table>
+      </div>
+    <div class="col-lg-6">
+
+      <h4>PLease get in touch</h4>
+    <p>This is work in progress and we’d love to hear what you think. Please let us know
+    if you have any feedback or questions by <a href="mailto:maiachess@cs.toronto.edu">email</a> or <a href="https://twitter.com/maiachess">Twitter</a>.</p>
+    </div>
+    </div>
+    <div class="row closing-remark">
       <div class="col-lg-6 col-lg-offset-4">
-    <p>1) Play Maia (links to all 3)</p>
-    <p>2) This is work in progress and we’d love to hear what you think. Please let us know
-    if you have any feedback or questions by email or Twitter (with links).</p>
-    <p>Maia is research project using chess as a case study for how to design better human-AI interactions. We hope Maia
-    becomes a useful learning tool and is fun to play against.”</p>
+        <p>Maia is research project using chess as a case study for how to design better human-AI interactions. We hope Maia becomes a useful learning tool and is fun to play against.</p>
+      </div>
     </div>
-    </div>
+
   </div>
+
 </div>
 </div>
 </section>
