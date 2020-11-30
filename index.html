@@ -167,7 +167,8 @@ title: Maia Chess
       </div>
       <div class="col-lg-6">
         <div class="text_column">
-          <p> We are working on making Maias that play like specific people, using transfer learning. This gives us a significant accuracy boost, but only on the targeted player. In fact the models are so accurate that they can correctly determine if the player is the one they're trained on after watching only four games.</p>
+          <p>In current work, we are pushing the modeling of human play to the next level: can we actually predict the moves a particular human player would make? It turns out that personalizing Maia gives us our biggest performance gains.We achieve these results by fine-tuning Maia. Starting with a base Maia, say Maia 1900, we update the model by
+          continuing training on an individual player’s games. This plot shows different models accuracy at predicting the next move of our baseline Maias and the fine tuned models.</p>
           <p>The paper for this work is available as a preprint <a href="https://arxiv.org/abs/2008.10086">here</a>.</p>
         </div>
       </div>
