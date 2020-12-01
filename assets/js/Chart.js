@@ -1528,7 +1528,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0]) 
+   return "#" + hexDouble(rgba[0])
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -15520,6 +15520,13 @@ var Legend = core_element.extend({
 
 				// Draw pointStyle as legend symbol
 				helpers$1.canvas.drawPoint(ctx, legendItem.pointStyle, radius, centerX, centerY, legendItem.rotation);
+			} else if (labelOpts && labelOpts.useLineStyle) {
+				ctx.strokeRect(
+						rtlHelper.leftForLtr(x, boxWidth),
+						y + fontSize / 2,
+						boxWidth,
+						0,
+						);
 			} else {
 				// Draw box as legend symbol
 				ctx.fillRect(rtlHelper.leftForLtr(x, boxWidth), y, boxWidth, fontSize);

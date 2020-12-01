@@ -9,8 +9,8 @@ Chart.defaults.global.defaultFontColor = '#222';
 
 var image_downloads = {};
 
-var leela_dash = [20, 3];
-var sf_dash = [10, 7];
+var leela_dash = [12, 5];
+var sf_dash = [5, 2];
 
 function draw_main_bar_plot() {
     var ctx = document.getElementById('maia_bars').getContext('2d');
@@ -101,7 +101,8 @@ var line_plt_options = {
         position: 'bottom',
         labels: {
             fontSize: $(window).width() < 800 ? 12 : 16,
-            boxWidth: 1,
+            boxWidth: 20,
+            useLineStyle: true
         },
     },
     scales: {
