@@ -20,6 +20,10 @@
   padding-right: 1em;
 }
 
+.email_list {
+  color: rgba(255, 238, 0, 0.719) !important;
+}
+
 body {
     background-color: var(--light_background);
 }
