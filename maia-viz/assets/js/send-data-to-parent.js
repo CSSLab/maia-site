@@ -13,7 +13,7 @@
         var targetElementContainer = document.querySelector('.explorer');
         var targetId = targetElementContainer.getAttribute('id');
 
-        if(!id || !id.length) {
+        if (!targetId || !targetId.length) {
             targetId = 'msr-chess-experience';
         }
 
