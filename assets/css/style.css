@@ -25,6 +25,11 @@ body {
     background-color: var(--light_background);
 }
 
+.infopage {
+    color: black;
+    text-align: center;
+}
+
 code {
   display: block;
   white-space: pre-wrap;
@@ -242,3 +247,6 @@ footer {
     overflow: hidden;
 }
 
+th, td {
+  padding: 15px;
+}

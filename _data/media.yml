@@ -1,0 +1,50 @@
+articles:
+- site: WIRED
+  name: A New Artificial Intelligence Makes Mistakes—on Purpose
+  url: https://www.wired.com/story/new-artificial-intelligence-mistakes-purpose-chess/
+- site: The Next Web
+  name: This AI chess engine aims to help human players rather than defeat them
+  url: https://thenextweb.com/neural/2021/01/27/this-ai-chess-engine-aims-to-help-human-players-rather-than-defeat-them/
+- site: Engadget
+  name: Researchers built an AI that plays chess like a person, not a super computer
+  url: https://www.engadget.com/chess-ai-maia-microsoft-cornell-university-of-toronto-164500790.html
+- site: BlogTO
+  name: Toronto scientists help create AI-powered bot that can play chess like a human
+  url: https://www.blogto.com/tech/2021/01/toronto-scientists-create-ai-can-play-chess-human/
+- site: Lichess Blog
+  name: Introducing Maia, a human-like neural network chess engine
+  url: https://lichess.org/blog/X9PUixUAANCqFRSh/introducing-maia-a-human-like-neural-network-chess-engine
+- site: the morning paper
+  name: "Aligning superhuman AI with human behaviour: chess as a model system"
+  url: https://blog.acolyer.org/2020/09/14/aligning-superhuman-ai-with-human-behaviour/
+- site: Montreal Ethics Institute
+  name: "Research summary: Aligning Super Human AI with Human Behavior: Chess as a Model System"
+  url: https://montrealethics.ai/research-summary-aligning-super-human-ai-with-human-behavior-chess-as-a-model-system/
+- site: FreeThink
+  name: Meet the Chess AI You Might Actually Beat
+  url: https://www.freethink.com/articles/chess-ai
+  note: computer scientist Joel Kleinberg
+- site: Yotta Chess
+  name: Maia, the most humane AlphaZero
+  url: https://www.yottachess.com/notice/Maia-the-most-humane-AlphaZero
+academic:
+- site: MSR blog
+  name: The human side of AI for chess
+  url: https://www.microsoft.com/en-us/research/blog/the-human-side-of-ai-for-chess/
+- site: Cornell Chronicle
+  name: Chess engine sacrifices mastery to mimic human play
+  url: https://news.cornell.edu/stories/2021/01/chess-engine-sacrifices-mastery-mimic-human-play
+- site: U of T news
+  name: "To err is not just human: U of T researchers develop AI that plays chess like a person"
+  url: https://www.utoronto.ca/node/168184
+- site: U of T CS news
+  name: New chess AI bridges gap between human and artificial intelligence
+  url: https://web.cs.toronto.edu/news-events/news/maia-chess-ai
+
+other:
+- site: Lucas Chess
+  name:  R 1.06 Maia
+  url: http://lucaschess.blogspot.com/2021/01/r-106-maia.html
+- site: Chess Programming Wiki
+  name: Maia Chess
+  url: https://www.chessprogramming.org/Maia_Chess
