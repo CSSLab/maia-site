@@ -4,7 +4,7 @@
     {%- for person in people -%}
         <div class="person">
                 <div class="person-line">
-                <img class="img-circle img-responsive img-center person-image" src="{{person.image }}">
+                <img class="img-circle img-responsive img-center person-image" src="{{person.image }}" alt = "Picture of {{ person.name }}">
                 </div>
 
                 <div class="person-line">
@@ -18,15 +18,15 @@
                     {%- if person.website -%}
                     <div class="person-link">
                         <a href="{{ person.website | escape }}">
-                            <i class="fas fa-external-link-alt"></i>
+                            <i class="fas fa-external-link-alt" title="{{ person.name }} website link"></i>
                         </a>
                     </div>
                     {%- endif -%}
 
                     {%- if person.twitter -%}
                     <div class="person-link">
-                     <a href="https://www.twitter.com/{{ person.twitter| cgi_escape | escape }}">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://www.twitter.com/{{ person.twitter| cgi_escape | escape }}">
+                        <i class="fab fa-twitter" title="{{ person.name }} Twitter link"></i>
                     </a>
                     </div>
                     {%- endif -%}
@@ -34,7 +34,7 @@
                     {%- if person.github -%}
                     <div class="person-link">
                         <a href="https://github.com/{{ person.github| cgi_escape | escape }}">
-                            <i class="fab fa-github"></i>
+                            <i class="fab fa-github" title="{{ person.name }} Github link"></i>
                         </a>
                     </div>
                     {%- endif -%}
